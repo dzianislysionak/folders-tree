@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { folderTree } from './lib/cleanPath';
 
 function App() {
-  const [path, setPath] = useState(folderTree)
+  const [tree, setTree] = useState(folderTree)
   
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>)=>{
 
@@ -21,14 +21,14 @@ function App() {
     const par = idx === 0 ? 'src' : originalArr.slice(0,idx).join('/')
     tree.add(value,subPath, par)
   })
-  setPath(tree)
+  setTree(tree)
 }
 
 
   return (
     <>
       <RadioGroup onChange={handleOnChange}/>
-      <TreeVisualization node={path.root} isExpanded />
+      <TreeVisualization node={tree.root} isExpanded />
     </>
   )
 }

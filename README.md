@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Run project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- npm install
+- npm run dev
 
-Currently, two official plugins are available:
+## Folder structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+.
+ * [src](./src)
+   * [components](.src/components)  ui components for tree visualization
+   * [uiKit](.src/uiKit) smallest reusable components
+   * [lib](.src/lib) helper functions
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## About project
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Main goal of this project is visualization folder tree structure. By default we can see merged array of path examples. [paths](./src/libs/cleanPath)  
+We can add new files/folder to parent node by clicking "add new" button.  
+For more detailed visibility at the top of the page added radio buttons group where we can select single path from examples.  
+We save data in Narray data structure.
+Next rules applied for paths :  
+example '/dir8/subdir7/a/b/c/d/../../../.././///file8.txt',  --> '/dir/subdir/file.txt'  
+../ - go one level up  
+./ - stay on the same level  
+//// - stay on the same level

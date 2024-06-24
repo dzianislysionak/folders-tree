@@ -26,7 +26,7 @@ export const cleanPath = (path: string)=>{
 }
 
 export const paths =[
-    ['/dir/subdir/../file1.txt', '/dir/file.txt'],
+    ['/dir/subdir/../file1.txt', '/dir/file1.txt'],
     ['/dir2/subdir1/../file2.txt', '/file.txt'],
     ['/dir3/subdir2/../../file3.txt', '/file1.txt'],
     ['/dir4/subdir3/../../file4.txt', '/file2.txt'],
