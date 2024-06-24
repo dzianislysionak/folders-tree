@@ -1,0 +1,23 @@
+.node-value {
+    padding: 5px 10px;
+    background-color: #69b3a2;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.children {
+    margin-left: 20px;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+}
+
+.value-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
