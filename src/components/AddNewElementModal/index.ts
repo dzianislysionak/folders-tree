@@ -1,1 +1,1 @@
-export { AddNewElementModal } from "./AddNewElementModal";
+export { AddNewElementModal } from './AddNewElementModal';

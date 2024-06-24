@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import ReactDOM from 'react-dom';
-import './Modal.css'; 
+import './Modal.css';
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,11 +26,11 @@ export const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
         <div className="modal-header">
-          <button onClick={closeModal} className="close-button">&times;</button>
+          <button onClick={closeModal} className="close-button">
+            &times;
+          </button>
         </div>
-        <div className="modal-body">
-          {children}
-        </div>
+        <div className="modal-body">{children}</div>
       </div>
     </div>,
     document.body

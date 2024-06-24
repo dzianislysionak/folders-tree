@@ -1,4 +1,4 @@
 export type TNodeData = {
-    value: string;
-    displayValue: string;
-}
+  value: string;
+  displayValue: string;
+};

@@ -1,14 +1,14 @@
 input.text-input {
-    /* background-color: var(--white); */
-    /* color: var(--primary-default); */
-    padding: 24px 18px 6px;
-    box-sizing: border-box;
-    font-size: 17px;
-    font-weight: bold;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid rgb(68, 59, 59);
-    border-radius: 8px;
-    height: 60px;
+  /* background-color: var(--white); */
+  /* color: var(--primary-default); */
+  padding: 24px 18px 6px;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid rgb(68, 59, 59);
+  border-radius: 8px;
+  height: 60px;
 }

@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import { NaryTree } from './lib/tree';
 import { cleanPath } from './lib/cleanPath';
 import { TreeVisualization } from './components/TreeVisualization';
@@ -7,30 +7,28 @@ import { useState } from 'react';
 import { folderTree } from './lib/cleanPath';
 
 function App() {
-  const [tree, setTree] = useState(folderTree)
-  
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>)=>{
+  const [tree, setTree] = useState(folderTree);
 
-    const cleanedPath = cleanPath(e.target.value)
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const cleanedPath = cleanPath(e.target.value);
 
     const tree = new NaryTree();
-    tree.add('src', 'src')
+    tree.add('src', 'src');
 
-    cleanedPath.pathArr.forEach((subPath,idx, originalArr)=>{
-    const value =  originalArr.slice(0, idx + 1).join('/')
-    const par = idx === 0 ? 'src' : originalArr.slice(0,idx).join('/')
-    tree.add(value,subPath, par)
-  })
-  setTree(tree)
-}
-
+    cleanedPath.pathArr.forEach((subPath, idx, originalArr) => {
+      const value = originalArr.slice(0, idx + 1).join('/');
+      const par = idx === 0 ? 'src' : originalArr.slice(0, idx).join('/');
+      tree.add(value, subPath, par);
+    });
+    setTree(tree);
+  };
 
   return (
     <>
-      <RadioGroup onChange={handleOnChange}/>
+      <RadioGroup onChange={handleOnChange} />
       <TreeVisualization node={tree.root} isExpanded />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
